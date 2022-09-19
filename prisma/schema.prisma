@@ -16,12 +16,13 @@ model User {
   updated_at     DateTime @updatedAt
   email          String   @unique
   hashedPassword String
+  nickName       String?
   Tasks          Task[]
 }
 
 model Task {
   id          Int      @id @default(autoincrement())
-  cretead_at  DateTime @default(now())
+  created_at  DateTime @default(now())
   updated_at  DateTime @updatedAt
   title       String
   description String?
